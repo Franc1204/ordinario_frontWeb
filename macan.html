@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Porsche Macan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/assets/Porsche-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/macan.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css">
+  </head>
+  <body class="bg-light">
+    <header id="header">
+      <nav class="navbar navbar-dark navbar-custom">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasMenu"
+            aria-controls="offcanvasMenu"
+            aria-label="Toggle menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img
+              src="assets/logo_blanco.png"
+              alt="Porsche Logo"
+              height="300"
+              style="object-fit: contain;"
+            />
+          </a>
+        </div>
+      </nav>
+      <div
+        class="offcanvas offcanvas-start offcanvas-custom"
+        tabindex="-1"
+        id="offcanvasMenu"
+        aria-labelledby="offcanvasMenuLabel"
+      >
+        <div class="offcanvas-header border-bottom border-white">
+          <button
+            type="button"
+            class="btn-close btn-close-white text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="list-unstyled menu-options">
+            <li><a href="index.html" class="text-decoration-none">Inicio</a></li>
+            <li><a href="myporsche.html" class="text-decoration-none">My Porsche</a></li>
+            <li><a href="contact.html" class="text-decoration-none">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="offcanvas offcanvas-end offcanvas-custom"
+        tabindex="-1"
+        id="offcanvasDetails"
+        aria-labelledby="offcanvasDetailsLabel"
+      >
+        <div class="offcanvas-header border-bottom border-white">
+          <h5 class="offcanvas-title" id="offcanvasDetailsLabel">
+            Detalles Técnicos
+          </h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <h6>Especificaciones:</h6>
+          <ul>
+            <li><strong>Aceleración:</strong> 0 - 100 km/h en 5.7 s</li>
+            <li><strong>Potencia:</strong> 265 kW / 360 HP</li>
+            <li><strong>Velocidad máxima:</strong> 220 km/h</li>
+            <li><strong>Autonomía:</strong> 536 - 641 km</li>
+            <li>
+              <strong>Carga rápida:</strong> Compatible con carga de alta velocidad de 800 voltios
+            </li>
+          </ul>
+          <p>
+            El Macan Electric combina un rendimiento deportivo excepcional
+            con la eficiencia de la tecnología eléctrica, ofreciendo una experiencia
+            única en cada viaje.
+          </p>
+          <p>
+            Su diseño aerodinámico, sistemas avanzados de asistencia al conductor y
+            una ingeniería de punta lo posicionan como uno de los vehículos eléctricos
+            más innovadores del mercado.
+          </p>
+        </div>
+      </div>
+    </header>
+    <div class="container d-flex flex-column align-items-center">
+      <div class="video-container">
+        <video
+          src="/assets/macan/macanhero.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          class="w-100"
+        ></video>
+        <img
+          src="assets/macan/macan.png"
+          alt="Macan"
+          class="overlay-img"
+        />
+        <img
+          src="assets/macan/macanhero.avif"
+          alt="Macan-carro"
+          class="overlay-font"
+        />
+      </div>
+      <div class="text-container text-center">
+        <div class="mt-4">
+          <h1 class="fw-bold">Macan Electric</h1>
+          <p class="text-uppercase text-muted">Eléctrico</p>
+          <p class="h3 text-dark">MXN 1,708,000.00</p>
+          <button class="btn btn-dark btn-lg mt-3" id="btnComprarMacan">Comprar</button>
+        </div>
+        <div class="row mt-4 align-items-center">
+          <div class="col-md-6 text-start">
+            <h1 class="fw-bold">5.7 s</h1>
+            <p class="text text-muted">
+              Aceleración de 0 - 100 km/h con Launch Control
+            </p>
+            <h1 class="fw-bold">265 kW / 360 HP</h1>
+            <p class="text text-muted">
+              Potencia Overboost con Launch Control hasta (kW)/Potencia Overboost
+              con Launch Control hasta (HP)
+            </p>
+            <h1 class="fw-bold">220 km/h</h1>
+            <p class="text text-muted">Velocidad máxima</p>
+            <button
+              class="btn btn-dark btn-lg mt-3"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasDetails"
+              aria-controls="offcanvasDetails"
+            >
+              Todos los detalles técnicos
+            </button>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="assets/macan/macan1.avif"
+              alt="Macan frontal"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <div class="mt-4">
+          <img
+            src="assets/macan/macannegro.svg"
+            alt="Macan silueta"
+            class="img-fluid small-img"
+          />
+        </div>
+        <div class="mt-4">
+          <custom-video-player
+            src="/assets/macan/macanvideo2.mp4"
+            autoplay
+            muted
+            loop
+          ></custom-video-player>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6 position-relative">
+          <img
+            src="assets/macan/macan2.avif"
+            alt="Persona y Macan"
+            class="img-fluid lower-image"
+          />
+        </div>
+        <div class="col-md-6 position-relative">
+          <img
+            src="assets/macan/macan3.avif"
+            alt="Macan Cargando"
+            class="img-fluid upper-image"
+          />
+          <div
+            class="position-absolute top-50 start-0 text-white p-3"
+            style="transform: translateY(-50%); margin: 1rem;"
+          >
+            <small class="fw-light">Tiempo de carga</small>
+            <h1 class="display-1 fw-bold">21</h1>
+            <p class="fs-3">minutos</p>
+            <h4>Ionity</h4>
+            <p class="mt-3">
+              <strong>Carga Porsche</strong><br />
+              Más información sobre nuestras soluciones de carga
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="mt-4 black-box position-relative">
+        <div class="black-box-content text-light text-start">
+          <h2 class="fw-bold display-4">Electrifica la ciudad.</h2>
+          <p class="mt-3">
+            Ya sea en grandes metrópolis o en ciudades emergentes: el Macan totalmente eléctrico se siente como en casa donde la vida palpita. Donde la individualidad se escribe con mayúsculas. Y donde todos tienen la oportunidad de reinventarse.
+          </p>
+        </div>
+        <img
+          src="assets/macan/macan6.avif"
+          alt="Macan fondo detrás"
+          class="overlap-img-behind"
+        />
+        <img
+          src="assets/macan/macan5.avif"
+          alt="Macan superpuesto"
+          class="overlap-img"
+        />
+      </div>
+
+      <div class="mt-5 text-center">
+        <img
+          src="/assets/macan/macan4.avif"
+          alt="Macan vista lateral"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+    <div class="container-fluid my-5 px-0">
+      <h2 class="mb-4 text-center fw-bold">
+        Aspectos destacados del Macan.
+      </h2>
+      <div id="destacadosCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <div class="card h-100 border-0">
+                  <img
+                    src="assets/macan/carrusel1.avif"
+                    class="card-img-top"
+                    alt="Diseño Macan"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Moderno. Urbano. Eléctrico.</h5>
+                    <p class="card-text">
+                      Con su interpretación progresiva del diseño clásico de Porsche, el Macan totalmente eléctrico muestra inmediatamente de qué está hecho.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100 border-0">
+                  <img
+                    src="assets/macan/carrusel2.avif"
+                    class="card-img-top"
+                    alt="Interior Macan"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Porsche Driver Experience.</h5>
+                    <p class="card-text">
+                      El puesto de conducción altamente digitalizado con una pantalla curva configurable individualmente ofrece un manejo moderno y sencillo para el control individual de las funciones del vehículo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <div class="card h-100 border-0">
+                  <img
+                    src="assets/macan/carrusel3.avif"
+                    class="card-img-top"
+                    alt="Rendimiento Macan"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">E-Performance.</h5>
+                    <p class="card-text">
+                      Típico de Porsche: hasta 265 kW (360 PS) de potencia Overboost con Launch Control. Aceleración de 0 a 100 km/h en 5,7 segundos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100 border-0">
+                  <img
+                    src="assets/macan/carrusel4.avif"
+                    class="card-img-top"
+                    alt="Carga Macan"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Carga rápida fuera de casa.</h5>
+                    <p class="card-text">
+                      La innovadora arquitectura de carga permite una carga de alta velocidad de 800 voltios con hasta 270 kW para una autonomía de 536 - 641 km 
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#destacadosCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#destacadosCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+    <div id="pasarelaCompraContainer"></div>
+    
+    <script src="/components/custom-video-player.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
+    <script src="/components/utils.js"></script>
+    <script type="module" src="/components/auth.js"></script>
+    <script type="module">
+      import { iniciarProcesoCompra, procesarCompra } from '/components/compra.js';
+      
+      const MODELO_MACAN = {
+        id: "macan",
+        nombre: "Macan GTS",
+        precio: 1872000
+      };
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        // Cargar pasarela de compra
+        fetch('/components/pasarela-compra.html')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`Error al cargar pasarela: ${response.status}`);
+            }
+            return response.text();
+          })
+          .then(html => {
+            document.getElementById('pasarelaCompraContainer').innerHTML = html;
+            console.log('Pasarela de compra cargada correctamente');
+            
+            configurarBotonCompra();
+            // Configurar botón de completar compra
+            const botonComprar = document.getElementById('botonComprar');
+            if (botonComprar) {
+              botonComprar.addEventListener('click', procesarCompra);
+            }
+          })
+          .catch(error => {
+            console.error('Error al cargar pasarela de compra:', error);
+            alert('Error al cargar la pasarela de compra. Por favor, recargue la página.');
+          });
+          
+        // Configurar slide automático de características
+        const carousel = document.getElementById('caracteristicasCarousel');
+        if (carousel) {
+          const carouselInstance = new bootstrap.Carousel(carousel, {
+            interval: 5000
+          });
+        }
+      });
+
+      function configurarBotonCompra() {
+        const btnComprar = document.getElementById('btnComprarMacan');
+        if (!btnComprar) {
+          console.error('No se encontró el botón de compra con ID: btnComprarMacan');
+          return;
+        }
+        
+        btnComprar.addEventListener('click', function() {
+          console.log('Botón de compra clickeado');
+          // Verificar si el usuario está autenticado
+          if (!verificarAutenticacion()) {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            localStorage.setItem('redirect_after_login', currentPage);
+            
+            if (window.Swal) {
+              Swal.fire({
+                title: 'Iniciar sesión',
+                text: 'Debe iniciar sesión para realizar la compra',
+                icon: 'info',
+                confirmButtonText: 'Ir a iniciar sesión'
+              }).then(() => {
+                window.location.href = '/myporsche.html';
+              });
+            } else {
+              alert('Debe iniciar sesión para continuar');
+              window.location.href = '/myporsche.html';
+            }
+            return;
+          }
+          
+          // Iniciar proceso de compra
+          iniciarProcesoCompra(MODELO_MACAN.id, MODELO_MACAN.nombre, MODELO_MACAN.precio);
+        });
+      }
+    </script>
+  </body>
+</html>
