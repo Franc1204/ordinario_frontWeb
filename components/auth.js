@@ -125,5 +125,4 @@ window.actualizarMenu = actualizarMenu;
 window.cerrarSesion = cerrarSesion;
 window.protegerRuta = protegerRuta;
 
-// También exportamos las funciones para uso como módulo ES
 export { verificarAutenticacion, actualizarMenu, cerrarSesion, protegerRuta }; 
